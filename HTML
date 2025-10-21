@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматна игра</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Шахмат</h1>
+        </div>
+        <div class="main">
+            <div class="board-container">
+                <div class="board" id="board"></div>
+                <div class="coordinates-right">
+                    <div class="coordinate">8</div>
+                    <div class="coordinate">7</div>
+                    <div class="coordinate">6</div>
+                    <div class="coordinate">5</div>
+                    <div class="coordinate">4</div>
+                    <div class="coordinate">3</div>
+                    <div class="coordinate">2</div>
+                    <div class="coordinate">1</div>
+                </div>
+<div class="captured-pieces-container">
+    <h2>Взети фигури:</h2>
+    <div id="capturedBlack" class="captured-container">
+        <h3>Взети черни фигури:     </h3>
+    </div>
+    <div id="capturedWhite" class="captured-container">
+        <h3>Взети бели фигури:  </h3>
+    </div>
+</div>
+
+
+            </div>
+            <div class="coordinates-bottom">
+                <div class="coordinate">A</div>
+                <div class="coordinate">B</div>
+                <div class="coordinate">C</div>
+                <div class="coordinate">D</div>
+                <div class="coordinate">E</div>
+                <div class="coordinate">F</div>
+                <div class="coordinate">G</div>
+                <div class="coordinate">H</div>
+            </div>
+        </div>
+        <div class="controls">
+            <input type="text" id="moveInput" placeholder="Пример: пешка E2-E4">
+            <button id="submitMove">Изиграй ход</button>
+			<button id="exportHistory">Експортирай история</button>
+    <input type="file" id="import-history-file" accept=".txt">
+    <button id="importHistory" style="display: none;">Импортиране на история</button>
+        </div>
+		
+
+        <div id="history">
+            <h2>История на ходовете:</h2>
+            <ul id="moveHistory"></ul>
+        </div>
+		<div id="turnIndicator" class="turn-indicator">
+    <span>Сега е ред на:</span>
+    <span id="currentTurnDisplay" class="current-turn white">Белите</span>
+</div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
